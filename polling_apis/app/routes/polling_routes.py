@@ -34,7 +34,7 @@ def print_hello():
         request_uid = headers.get('X-Unique-ID','')
         if request_uid == "":
             now = time.time()
-            request_uid = 'ees_feedback_' + str(int(now)) + '_' + str(int(random.random()*1000000))
+            request_uid = 'polling_req' + str(int(now)) + '_' + str(int(random.random()*1000000))
         final_result['rsp_id'] = request_uid
         result = dict()
         result = Polling().print_hello()
